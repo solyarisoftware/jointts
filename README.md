@@ -85,4 +85,10 @@ Example:
 const buffer = concatts('Container JL1349-76 has been cleared for pick-up.', 'ogg')
 ```
 
+
+### Caching
+
+To speedup performances, a caching could improve elapsed times. 
+
+
 ---
