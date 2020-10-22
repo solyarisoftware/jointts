@@ -1,11 +1,11 @@
 # ConcaTTS
 
-trivial concatenative on-premise text to speech
+trivial concatenative on-premise text to speech.
 
 A simple on-premise concatenative TTS library, exposed as a nodejs package / function.
 The speech is produced by concatenating audio files sources for letters, words, entire phrases. 
 
-## Step 1: off-line data preparation: speech files data base
+## Step 1: OFF-LINE DATA PREPARATION: SPEECH FILES DATA BASE
 
 Following a configuration, all audio files required must be produced, with a recording or a download.
 Audio source files could be made in two different ways:
@@ -16,15 +16,15 @@ Audio source files could be made in two different ways:
 
 The requirement is to have input texts configured as characters, words, phrases:
 
-- List of ready done (static) phrases  
-    
+- List of ready done (static) phrases 
+ 
   Example:
   ```
   Looks like her company has three containers set to sail for tonight.
   ```
 
 - List of ready done letters/symbols for spoken spelling of unknown words or aplhanumeric codes:
-    
+ 
   Examples (alphanumeric codes):
   ```
   RAIU 690011 4 25 U1
@@ -32,12 +32,12 @@ The requirement is to have input texts configured as characters, words, phrases:
   ```
   BTW, above codes are container codes with format ISO6346 (see: https://github.com/solyarisoftware/iso6346).
   In this case the required spoken spelling is the concatenation of letter-by-letter speech:
-    
+
   text: `CSQU3054383`, text to speech: `C S Q U 3 0 5 4 3 8 3`
 
  
 - Static phrases containing also entities to be resolved at run-time
-    
+ 
   Example:
   ```
   Container JL1349-76 has been cleared for pick-up.
@@ -46,21 +46,21 @@ The requirement is to have input texts configured as characters, words, phrases:
   ```
   Container {alphanumeric_code} has been cleared for pick-up.
   ```
-  
+
 - Phrases built concatenating words and or letters (that's the general case).
 
 
-## Step 2: run-time environment
+## Step 2: RUN-TIME ENVIRONMENT
 
 The target environment is any sort of embedded system, with scarse CPU resources, but a "real-time" responsive speech output.
 
 ### API functions
 
 Output as: 
-  - an audio file, uncompressed (.wav) or in a compressed format (.ogg)
-  - a memory buffer in a specified format
-  
-```
+  - an audio file, lossless (e.g. `wav`) or in a compressed  lossy compression format (e.g. [`ogg`](https://en.wikipedia.org/wiki/Opus_(audio_format)))
+  - a memory buffer in ain above specified format
+ 
+```javascript
 /**
  * concatts 
  *
@@ -74,13 +74,12 @@ Output as:
 ```
 
 Example:
-```
+```javascript
 const buffer = concatts('Container JL1349-76 has been cleared for pick-up.', 'ogg')
 ```
 
 ### Caching
 
 To speedup performances, a caching could improve elapsed times. 
-
 
 ---
