@@ -1,0 +1,32 @@
+{
+  "name": "concatts",
+  "version": "0.0.3",
+  "description": "trivial concatenative on-premise text to speech",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solyarisoftware/concatts.git"
+  },
+  "keywords": [
+    "tts",
+    "concatenative",
+    "TTS",
+    "test",
+    "to",
+    "speech",
+    "on-premise",
+    "TTS"
+  ],
+  "author": "Giorgio Robino <giorgio.robino@gmail.com> (https://convcomp.it)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solyarisoftware/concatts/issues"
+  },
+  "homepage": "https://github.com/solyarisoftware/concatts#readme"
+}
