@@ -1,6 +1,6 @@
 {
   "name": "concatts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "trivial concatenative on-premise text to speech",
   "main": "index.js",
   "directories": {

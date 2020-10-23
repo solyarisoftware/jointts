@@ -78,17 +78,36 @@ CSQU3054383
 BTW, the two initial lines are container codes with format ISO6346 (see: https://github.com/solyarisoftware/iso6346).
 In the case of an alphanumeric sequence of chars, the required spoken spelling is the concatenation of letter-by-letter speech:
 
-Original input text: 
+The original input text
 ```
 CSQU3054383
 ```
-Text to speech spelled as sequence of single characters: 
+is spelled as sequence of single characters (separated by brief pauses): 
 ```
 C S Q U 3 0 5 4 3 8 3
 ```
-Corresponding to pseudo-phonetic spelling audio:
+
+Where the spelkling of each character corresponds to the pseudo-phonetic spelling audio, depending on 
+- the language 
+- the specific [spelling alphabet](https://en.wikipedia.org/wiki/Spelling_alphabet).
+
+A basic TTS for English language coud be
 ```
-sii kiu iu three ou five four three eight three
+sii es kiu iu three zero five four three eight three
+```
+Whereas, using the NATO phonetic alphabet:
+```
+sii for Charli
+es for Sierra
+kiu for Quebec
+iu for Uniform
+three
+zero
+five
+four
+three
+eight
+three
 ```
 
 ### Template literals
@@ -104,9 +123,9 @@ At the configuration level, a template literal could have a syntax like:
 Container {alphanumeric_code} has been cleared for pick-up.
 ```
 That could be a concatenation of 3 strings component parts:
-- `'Container'` static string
+- `Container` static string
 - ` {alphanumeric_code} `, char-by-char spelling
-- `'has been cleared for pick-up.'`, static string
+- `has been cleared for pick-up.`, static string
 
 At run-time, the TTS translation function must recognize the template literal, concatenating the sequences.
 
