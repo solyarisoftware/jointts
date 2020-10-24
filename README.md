@@ -48,21 +48,23 @@ ttsfile('123.45', 'en')
 // -> '/some/path/en/one_two_three_point_four_five.ogg'
 ```
 
-> It could be a good idea to have a directory for each language, by example:
->
-> ├── some/path/audio
-> │   ├── it
-> │   │   ├── uno_due_tre_punto_quattro_cinque.ogg
-> │   │   ├── uno_due_tre_punto_quattro_sei.ogg
-> │   │   └─── ti_amo.ogg
-> │   ├── en
-> │   │   ├── one_two_three_point_four_five.ogg
-> │   │   ├── one_two_three_point_four_six.ogg
-> │   │   └─── i_love_you.ogg
-> │   ├── de
-> │   │   ├── ...ogg
-> │   │   ├── ...ogg
->
+It could be a good idea to have a directory for each language, by example:
+
+```
+├── some/path/audio
+│   ├── it
+│   │   ├── uno_due_tre_punto_quattro_cinque.ogg
+│   │   ├── uno_due_tre_punto_quattro_sei.ogg
+│   │   └─── ti_amo.ogg
+│   ├── en
+│   │   ├── one_two_three_point_four_five.ogg
+│   │   ├── one_two_three_point_four_six.ogg
+│   │   └─── i_love_you.ogg
+│   ├── de
+│   │   ├── ...ogg
+│   │   ├── ...ogg
+
+```
 
 ## Input text types
 
@@ -296,8 +298,8 @@ const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', '
 
 - So far, the project is just a proposal of intents.
 - High-level interface to be defined. 
-- [lib/googleTransalteTTS.js](lib/googleTransalteTTS.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
-- [lib/convertcodec.js](lib/convertcodec.js]): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
+- [lib/googleTranslateTTS.js](lib/googleTranslateTTS.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
+- [lib/convertcodec.js](lib/convertcodec.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
 
 
 ## License 
