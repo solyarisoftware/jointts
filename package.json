@@ -1,6 +1,6 @@
 {
   "name": "concatts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "trivial concatenative on-premise text to speech",
   "main": "index.js",
   "directories": {
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/solyarisoftware/concatts#readme",
   "dependencies": {
+    "node-fetch": ">=2.6.1",
     "google-tts-api": "0.0.4"
   }
 }
