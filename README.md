@@ -26,21 +26,43 @@ Speech generation is language-dependent. The speech translation of any text depe
 
 By example `123.45` is pronounced 
 
-- in Italian: `uno due tre punto quattro cinque`, or better: `centoventitré punto quarantacinque`
-- in English: `one two three point four five`, etc.
+- in Italian: `uno due tre punto quattro cinque` (or: `centoventitré punto quarantacinque`)
+- in English: `one two three point four five`
 
-A good practice could be to use [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to code texts to be translated. 
+A good practice could be to use 
+[ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to code texts to be translated. 
 
-Maybe with a function call, by example for Italian language, as:
+Maybe with a function call (for Italian language):
+
 ```javascript
-conca.ttsfile('123.45', 'it')
+const {ttsfile} = require('concatts')
+ttsfile('123.45', 'it')
 // -> '/some/path/it/uno_due_tre_punto_quattro_cinque.ogg'
 ```
+
 with the English equivalent:
+
 ```javascript
-conca.ttsfile('123.45', 'en')
+const {ttsfile} = require('concatts')
+ttsfile('123.45', 'en')
 // -> '/some/path/en/one_two_three_point_four_five.ogg'
 ```
+
+> It could be a good idea to have a directory for each language, by example:
+>
+> ├── some/path/audio
+> │   ├── it
+> │   │   ├── uno_due_tre_punto_quattro_cinque.ogg
+> │   │   ├── uno_due_tre_punto_quattro_sei.ogg
+> │   │   └─── ti_amo.ogg
+> │   ├── en
+> │   │   ├── one_two_three_point_four_five.ogg
+> │   │   ├── one_two_three_point_four_six.ogg
+> │   │   └─── i_love_you.ogg
+> │   ├── de
+> │   │   ├── ...ogg
+> │   │   ├── ...ogg
+>
 
 ## Input text types
 
@@ -70,7 +92,8 @@ The above sentence corresponds to
 From the API perspective you have a possible method:
 
 ```javascript
-const fileName = conca.ttsfile('Looks like her company has three containers set to sail for tonight', 'en')
+const {ttsfile} = require('concatts')
+const fileName = ttsfile('Looks like her company has three containers set to sail for tonight', 'en')
 // -> 'your/path/speech/en/looks_like_her_company_has_three_containers_set_to_sail_for_tonight.ogg'
 ```
 
@@ -188,11 +211,11 @@ Audio source files could be made in two different ways:
 ### API functions signature
 
 
-#### `config`
+#### `setup`
 
 ```javascript
 /**
- * config 
+ * setup 
  *
  * @param {string}  language  language code ('en-us', 'it', )
  * @param {String}  codec     audio coding format (wav/ogg/etc.)
@@ -202,12 +225,14 @@ Audio source files could be made in two different ways:
 
 Example:
 ```javascript
-const {config} = require('concatts')
-config('it', 'ogg', 'nato')
+const {setup} = require('concatts')
+setup('it', 'ogg', 'nato')
 ```
 
 #### `ttsfile`    
-The returned object is an audio file, lossless (e.g. `wav`) or in a compressed lossy compression format (e.g. [`ogg`](https://en.wikipedia.org/wiki/Opus_(audio_format)))
+The returned object is an audio file, lossless (e.g. `wav`) 
+or in a compressed lossy compression format 
+(e.g. [`ogg`](https://en.wikipedia.org/wiki/Opus_(audio_format)))
  
 ```javascript
 /**
@@ -261,21 +286,19 @@ const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', '
   - audio files concatenation using `sox`:
     - https://superuser.com/questions/571463/how-do-i-append-a-bunch-of-wav-files-while-retaining-not-zero-padded-numeric
     - https://superuser.com/questions/64164/linux-command-to-concatenate-audio-files-and-output-them-to-ogg
-    - http://sox.sourceforge.net/Docs/Documentation
     - https://stackoverflow.com/questions/10721089/combine-two-audio-files-with-a-command-line-tool
     - https://askubuntu.com/questions/20507/concatenating-several-mp3-files-into-one-mp3
+    - http://sox.sourceforge.net/Docs/Documentation
     - http://sox.sourceforge.net/sox.html#EFFECTS
-
-- Caching
-
-  To speedup performances, a caching could improve elapsed times. 
 
 
 ## Status
 
-- So far, the project is just a proposal of intents. Waka, waka, waka. Next step: 
-- Use [Google Translate Speech library](https://github.com/zlargon/google-tts) to quickly produce audio base files.
-- Define the high-level interface. 
+- So far, the project is just a proposal of intents.
+- High-level interface to be defined. 
+- [lib/googleTransalteTTS.js](lib/googleTransalteTTS.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
+- [lib/convertcodec.js](lib/convertcodec.js]): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
+
 
 ## License 
 

@@ -1,0 +1,37 @@
+# vim session data
+Session.vim
+
+# Dependency directories
+node_modules/
+
+# internal usage bash commands directory
+com/
+
+audio/*.opus
+audio/*.webm
+audio/*.mp3
+audio/*.wav
+audio/*.ogg
+
+# temporary files
+tmp/
+
+# Logs
+log/
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+.env.test
