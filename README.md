@@ -4,20 +4,27 @@ Trivial concatenative on-premise text to speech.
 
 ## Concept
 
-- ConcaTTS is a simple on-premise concatenative TTS library, exposed as a nodejs package.
+ConcaTTS is a simple on-premise concatenative TTS library, exposed as a nodejs package.
 
-- The goal is to have a super simple (and performing) TTS suitable for applications 
-  with a small grammar (a limited set of sentences/words) for a semi-static natural language generation.
+The goal is to have a super simple (and performing) TTS suitable for applications 
+with a small grammar (a limited set of sentences/words) for a semi-static natural language generation.
 
-- The target environment is any sort of embedded system, 
+The speech is produced by concatenating prepared audio files sources, 
+for letters, words, template literals, entire phrases. 
+The strategy is to prepare "off-line" all audio files need, 
+to be available at run-time for fast concatenative audio generation. 
+Output will be both audio files or in-memory binary blobs (buffers) 
+in a specific audio coding format (maybe [OPUS ogg](https://en.wikipedia.org/wiki/Opus_(audio_format))
+
+Two typical applicative scenarios:
+
+- The target environment is any sort of embedded system (local/on-premise/offline/no-cloud!), 
   with poor CPU resources, but the need of a "real-time" responsive speech output.
 
-- The speech is produced by concatenating prepared audio files sources, 
-- for letters, words, template literals, entire phrases. 
-  The strategy is to prepare "off-line" all audio files need, 
-  to be available at run-time for fast concatenative audio generation. 
-  Output will be both audio files or in-memory binary blobs (buffers) 
-  in a specific audio coding format (preferably [OPUS ogg](https://en.wikipedia.org/wiki/Opus_(audio_format))
+- Text to speech not realized by a synthetic voice, 
+  but instead by real human voices (voice actors) recordings.
+  This is specially useful by example in language education apps, for special purposes, 
+  as syllables pronunciation.
 
 
 ## Internationalization 
@@ -273,12 +280,13 @@ const {ttsbuf} = require('concatts')
 const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', 'ogg')
 ```
 
-### Concatenation backend
+### Run-time concatenation backend
 
-- File-level concatenation at run-time 
+- File-level concatenation
 
-  The trivial approach is to use `ffmpeg` or `sox`, 
-  with a background process that create dynamic concatenations.
+  The quick&dirty approach is to use `ffmpeg` or `sox`, 
+  as a background process that create dynamic concatenations.
+ 
   See:
 
   - audio files concatenation using `ffmpeg`:
@@ -293,13 +301,43 @@ const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', '
     - http://sox.sourceforge.net/Docs/Documentation
     - http://sox.sourceforge.net/sox.html#EFFECTS
 
+- In-memory concatenation of audio buffers: 
 
-## Status
+  that's the correct / fastest solution: working in-memory.
+  It require having audio chunks as `PCM`, see:
+    - https://github.com/benmangold/audio-concatenation
+    - https://github.com/streamich/memfs
 
-- So far, the project is just a proposal of intents.
-- High-level interface to be defined. 
+
+## Installation (WORK-IN-PROGRESS)
+
+The target OS is Linux.
+
+- `ffmpeg`: for audio files conversions, audio play, audio concatenations
+  ```
+  sudo apt install ffmpeg 
+  ```
+  Optionally, to use OPUS codecs:
+  ```
+  sudo apt install libopus0 opus-tools
+  ```
+  Optionally, to a nice command line tool to get info about  audio files:
+  ```
+  sudo apt install mediainfo
+  ```
+
+- This package: use npm package manager repo
+  ```
+  $ npm install concatts
+  ```
+
+## Status: WORK-IN-PROGRESS
+
+- So far, the project is just a proposal of intents, with a bunch (25%) of features implemented.
+- High-level interface: to be defined. 
 - [lib/googleTranslateTTS.js](lib/googleTranslateTTS.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
-- [lib/convertcodec.js](lib/convertcodec.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
+- [lib/convertcodecs.js](lib/convertcodecs.js): convert audio files codecs, using ffmpeg.
+- helpers bash scripts (using ffmpeg): script/duration, script/play    
 
 
 ## License 

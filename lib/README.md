@@ -10,15 +10,6 @@ sudo apt install mediainfo
 ```
 
 
-## Command line audio player 
-
-```
-cvlc --play-and-exit --loop --verbose -1 /home/giorgio/concatts/audio/mi_chiamo_giorgio.mp3
-ffplay -nodisp -autoexit -hide_banner -loglevel panic audio/mi_chiamo_giorgio.mp3.opus
-opusdec --force-wav --quiet audio/mi_chiamo_giorgio.mp3.opus - | aplay
-
-```
-
 ## googleTranslateTTS.js
 
 ```

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#
+# calculate duration in seconds of a webm file
+# converting it in a wav temporary file
+# usage: com/duration audiofiles/audiofile.webm
+# see: https://stackoverflow.com/questions/62093480/how-to-find-duration-of-a-webm-opus-audio-file-in-seconds-in-a-js-program/62102888#62102888
+#
+if [ $# -eq 0 ]
+  then
+    echo
+    echo "calculate duration in seconds of an audio file"
+    echo "usage: $0 <audiofile>"
+    echo
+    exit
+fi
+
+INPUT_FILE=$1
+TMP_FILE=$1.temporary.wav
+
+ffmpeg -loglevel panic -i $INPUT_FILE -y $TMP_FILE
+ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 $TMP_FILE
+rm $TMP_FILE
