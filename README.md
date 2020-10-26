@@ -14,7 +14,8 @@ for letters, words, template literals, entire phrases.
 The strategy is to prepare "off-line" all audio files need, 
 to be available at run-time for fast concatenative audio generation. 
 Output will be both audio files or in-memory binary blobs (buffers) 
-in a specific audio coding format (maybe [OPUS ogg](https://en.wikipedia.org/wiki/Opus_(audio_format))
+in a specific audio coding format 
+(preferably [OPUS](https://en.wikipedia.org/wiki/Opus_(audio_format))).
 
 Two typical applicative scenarios:
 
