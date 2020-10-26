@@ -309,7 +309,7 @@ const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', '
     - https://github.com/streamich/memfs
 
 
-## Installation (WORK-IN-PROGRESS)
+## Installation
 
 The target OS is Linux.
 
@@ -331,14 +331,12 @@ The target OS is Linux.
   $ npm install concatts
   ```
 
-## Status: WORK-IN-PROGRESS
+## Status
 
-- So far, the project is just a proposal of intents, with a bunch (25%) of features implemented.
-- High-level interface: to be defined. 
-- [lib/googleTranslateTTS.js](lib/googleTranslateTTS.js): downloads audio base files, using [Google Translate Speech library](https://github.com/zlargon/google-tts).
-- [lib/convertcodecs.js](lib/convertcodecs.js): convert audio files codecs, using ffmpeg.
-- helpers bash scripts (using ffmpeg): script/duration, script/play    
+NOT READY. WORK-IN-PROGRESS.
 
+So far, the project is just a proposal of intents, 
+with a bunch (25%) of features implemented. High-level interface: to be defined. 
 
 ## License 
 
