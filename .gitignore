@@ -5,7 +5,7 @@ Session.vim
 node_modules/
 
 # internal usage bash commands directory
-com/
+mycom/
 
 audio/*.opus
 audio/*.webm
