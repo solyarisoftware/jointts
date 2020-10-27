@@ -7,12 +7,12 @@ node_modules/
 # internal usage bash commands directory
 mycom/
 
-audio/*.opus
-audio/*.webm
-audio/*.mp3
-audio/*.wav
-audio/*.ogg
-audio/*.pcm
+audio/**/*.opus
+audio/**/*.webm
+audio/**/*.mp3
+audio/**/*.wav
+audio/**/*.ogg
+audio/**/*.pcm
 
 # temporary files
 tmp/
