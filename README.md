@@ -327,10 +327,22 @@ The target OS is Linux.
   sudo apt install mediainfo
   ```
 
-- This package: use npm package manager repo
-  ```
-  $ npm install concatts
-  ```
+- The package contains command line interface program `concatts`, 
+  so you must install the npm package as global:
+
+  - use npm package manager repo
+
+    ```
+    $ npm install -g concatts
+    ```
+
+  - or download this github repo:
+
+    ```
+    $ git clone https://github.com/solyarisoftware/concatts
+    $ cd concatts && npm link
+    ``` 
+
 
 ## Status
 

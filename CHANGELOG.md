@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.2.0
+- added command line utility `concatts download googletranslate`
+
 ## Version 0.1.0
 - [lib/concat.js](lib/concat.js): concat files with same codec, using ffmpeg.
 - [lib/convertAudioFormats.js](lib/convertAudioFormats.js): convert audio files codecs/formats, using ffmpeg.
