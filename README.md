@@ -4,18 +4,21 @@ Trivial concatenative on-premise text to speech.
 
 ## Concept
 
-JoinTTS is a simple on-premise concatenative TTS library, exposed as a nodejs package.
+JoinTTS is a simple on-premise concatenative TTS nodejs API.
 
-The goal is to have a super simple (and performing) TTS suitable for applications 
-with a small grammar (a limited set of sentences/words) for a semi-static natural language generation.
+The goal is to have a super simple (and performing) TTS concatenating prerecorded audio files. 
+This system is suitable for applications with a small grammar 
+(a limited set of sentences/words) for a semi-static natural language generation.
 
 The speech is produced by concatenating prepared audio files sources, 
 for letters, words, template literals, entire phrases. 
+
 The strategy is to prepare "off-line" all audio files need, 
 to be available at run-time for fast concatenative audio generation. 
+
 Output will be both audio files or in-memory binary blobs (buffers) 
 in a specific audio coding format 
-(preferably [OPUS](https://en.wikipedia.org/wiki/Opus_(audio_format))).
+(by example using [OPUS](https://en.wikipedia.org/wiki/Opus_(audio_format)) codec).
 
 Two typical applicative scenarios:
 
@@ -28,7 +31,7 @@ Two typical applicative scenarios:
   as syllables pronunciation.
 
 
-## Internationalization 
+## Multi-language
 
 Speech generation is language-dependent. The speech translation of any text depends on a specific natural language of reference.
 
@@ -37,26 +40,24 @@ By example `123.45` is pronounced
 - in Italian: `uno due tre punto quattro cinque` (or: `centoventitré punto quarantacinque`)
 - in English: `one two three point four five`
 
-A good practice could be to use 
-[ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to code texts to be translated. 
+We use [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) codes
+to organize texts to be processed. 
 
-Maybe with a function call (for Italian language):
+Maybe with a function call:
 
 ```javascript
 const {ttsfile} = require('jointts')
+
+// generate the speech for a text in Italian language
 ttsfile('123.45', 'it')
 // -> '/some/path/it/uno_due_tre_punto_quattro_cinque.ogg'
-```
 
-with the English equivalent:
-
-```javascript
-const {ttsfile} = require('jointts')
+// the English language equivalent:
 ttsfile('123.45', 'en')
 // -> '/some/path/en/one_two_three_point_four_five.ogg'
 ```
 
-It could be a good idea to have a directory for each language, by example:
+Files are organized with a directory for each language:
 
 ```
 ├── some/path/audio
@@ -97,9 +98,7 @@ The above sentence corresponds to
 
 - or with a obscure name/UUID 
  
-  by example: `your/path/speech/en/1.ogg`.
-
-From the API perspective you have a possible method:
+  by example: `your/path/speech/en/123456.ogg`.
 
 ```javascript
 const {ttsfile} = require('jointts')
@@ -165,24 +164,27 @@ They are static phrases containing also entities to be resolved at run-time. By 
 Container JL1349-76 has been cleared for pick-up.
 ```
 
-in the example the entity `JL1349-76` is a container code, to be spelled as a `{alphanumeric_code}`. 
+in the sentence up here, the entity `JL1349-76` is a domain specific code 
+(a shipping container code), to be spelled as a `{alphanumeric_code}`. 
 At the configuration level, a template literal could have a syntax like: 
 ```
 Container {alphanumeric_code} has been cleared for pick-up.
 ```
 
-That could be a concatenation of 3 strings component parts:
-- `Container` static string
-- ` {alphanumeric_code} `, char-by-char spelling
-- `has been cleared for pick-up.`, static string
+That "template literal" be a concatenation of 3 strings component parts:
+- `Container`, a static string
+- ` {alphanumeric_code} `, an alphanumeric code to be spelled char-by-char
+- `has been cleared for pick-up.`, a static string
 
-At run-time, the TTS translation function must recognize the template literal, concatenating the sequences.
+At run-time, the TTS translation function must recognize the template literal,
+concatenating the sequences.
 
 ### Words concatenation 
 
-Phrases built concatenating words and or letters
+Phrases are built concatenating words and or letters
 (that is the general case of concatenative text-to-speech).
-Apparently it's a "worst case" because the system has to preset all the words of the grammar.
+Apparently it's a "worst case" because 
+the system has to preset all the words of the grammar.
 In the example: 
 ```
 Container JL1349-76 has been cleared for pick-up.
@@ -218,7 +220,7 @@ Audio source files could be made in two different ways:
 
 ## Step 2: run-time environment
 
-### API functions signature
+### API functions
 
 
 #### `setup`
@@ -233,7 +235,7 @@ Audio source files could be made in two different ways:
  */
 ```
 
-Example:
+Usage:
 ```javascript
 const {setup} = require('jointts')
 setup('it', 'ogg', 'nato')
@@ -255,7 +257,7 @@ or in a compressed lossy compression format
  */
 ```
 
-Example:
+Usage:
 ```javascript
 const {ttsfile} = require('jointts')
 const fileName = ttsfile('Container JL1349-76 has been cleared for pick-up.', 'en', 'ogg')
@@ -275,7 +277,7 @@ The returned object is a memory buffer in the above specified format.
  */
 ```
 
-Example:
+Usage:
 ```javascript
 const {ttsbuf} = require('jointts')
 const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', 'ogg')

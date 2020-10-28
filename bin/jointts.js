@@ -2,6 +2,7 @@
 
 const { getArgs } = require('../lib/getArgs')
 const { downloadGoogleTransalteMP3 } = require('../lib/googleTranslateTTS')
+const { convertAudioFormat } = require('../lib/convertAudioFormat')
 
 const programNamePathItems = process.argv[1].split('/')
 const programName = programNamePathItems[programNamePathItems.length-1]
@@ -28,6 +29,10 @@ switch ( command ) {
         break
 
     }    
+    break
+
+  case 'convert':
+    convertAudioFormat(commands.slice(1), args)
     break
 
   default:
