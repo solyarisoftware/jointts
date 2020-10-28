@@ -43,7 +43,7 @@ A good practice could be to use
 Maybe with a function call (for Italian language):
 
 ```javascript
-const {ttsfile} = require('concatts')
+const {ttsfile} = require('jointts')
 ttsfile('123.45', 'it')
 // -> '/some/path/it/uno_due_tre_punto_quattro_cinque.ogg'
 ```
@@ -51,7 +51,7 @@ ttsfile('123.45', 'it')
 with the English equivalent:
 
 ```javascript
-const {ttsfile} = require('concatts')
+const {ttsfile} = require('jointts')
 ttsfile('123.45', 'en')
 // -> '/some/path/en/one_two_three_point_four_five.ogg'
 ```
@@ -102,7 +102,7 @@ The above sentence corresponds to
 From the API perspective you have a possible method:
 
 ```javascript
-const {ttsfile} = require('concatts')
+const {ttsfile} = require('jointts')
 const fileName = ttsfile('Looks like her company has three containers set to sail for tonight', 'en')
 // -> 'your/path/speech/en/looks_like_her_company_has_three_containers_set_to_sail_for_tonight.ogg'
 ```
@@ -235,7 +235,7 @@ Audio source files could be made in two different ways:
 
 Example:
 ```javascript
-const {setup} = require('concatts')
+const {setup} = require('jointts')
 setup('it', 'ogg', 'nato')
 ```
 
@@ -257,7 +257,7 @@ or in a compressed lossy compression format
 
 Example:
 ```javascript
-const {ttsfile} = require('concatts')
+const {ttsfile} = require('jointts')
 const fileName = ttsfile('Container JL1349-76 has been cleared for pick-up.', 'en', 'ogg')
 ```
 
@@ -277,7 +277,7 @@ The returned object is a memory buffer in the above specified format.
 
 Example:
 ```javascript
-const {ttsbuf} = require('concatts')
+const {ttsbuf} = require('jointts')
 const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', 'ogg')
 ```
 
@@ -327,26 +327,26 @@ The target OS is Linux.
   sudo apt install mediainfo
   ```
 
-- The package contains command line interface program `concatts`, 
+- The package contains command line interface program `jointts`, 
   so you must install the npm package as global:
 
   - use npm package manager repo
 
     ```
-    $ npm install -g concatts
+    $ npm install -g jointts
     ```
 
   - or download this github repo:
 
     ```
-    $ git clone https://github.com/solyarisoftware/concatts
-    $ cd concatts && npm link
+    $ git clone https://github.com/solyarisoftware/jointts
+    $ cd jointts && npm link
     ``` 
 
 
 ## Status
 
-NOT READY. WORK-IN-PROGRESS.
+WORK-IN-PROGRESS / NOT READY.
 
 So far, the project is just a proposal of intents, 
 with a bunch (25%) of features implemented. High-level interface: to be defined. 
