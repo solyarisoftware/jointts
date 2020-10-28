@@ -1,6 +1,6 @@
 {
-  "name": "concatts",
-  "version": "0.2.1",
+  "name": "jointts",
+  "version": "0.3.0",
   "description": "trivial concatenative on-premise text to speech",
   "main": "index.js",
   "directories": {
@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "concatts": "bin/concatts.js"
+    "joint": "bin/jointts.js",
+    "jointts": "bin/jointts.js"
   },
   "repository": {
     "type": "git",

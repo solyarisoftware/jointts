@@ -1,10 +1,10 @@
-# ConcaTTS
+# JoinTTS
 
 Trivial concatenative on-premise text to speech.
 
 ## Concept
 
-ConcaTTS is a simple on-premise concatenative TTS library, exposed as a nodejs package.
+JoinTTS is a simple on-premise concatenative TTS library, exposed as a nodejs package.
 
 The goal is to have a super simple (and performing) TTS suitable for applications 
 with a small grammar (a limited set of sentences/words) for a semi-static natural language generation.

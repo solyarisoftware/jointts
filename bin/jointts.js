@@ -3,6 +3,9 @@
 const { getArgs } = require('../lib/getArgs')
 const { downloadGoogleTransalteMP3 } = require('../lib/googleTranslateTTS')
 
+const programNamePathItems = process.argv[1].split('/')
+const programName = programNamePathItems[programNamePathItems.length-1]
+
 // get command line args and commands
 const { args, commands } = getArgs()
 
@@ -38,9 +41,9 @@ function usage() {
   return ( 
     '\n' +
     'Usage:\n\n' +
-    '    concatts download googletranslate  downlaod MP3 file using Goole Translate TTS\n' +
+    `    ${programName} download gt - downlaod MP3 file using Goole Translate TTS\n` +
     '\n' +
-    '    concatts help                      show this help\n' +
+    `    ${programName} help        - show this help\n` +
     '\n'
   )  
 }  
