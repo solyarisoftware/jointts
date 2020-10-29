@@ -1,6 +1,6 @@
 # JoinTTS
 
-Trivial concatenative on-premise text to speech.
+Brainless concatenative text to speech.
 
 ## Concept
 
@@ -314,9 +314,7 @@ const buffer = ttsbuf('Il container JL1349-76 è pronto per il ritiro.', 'it', '
 
 ## Installation
 
-The target OS is Linux.
-
-- `ffmpeg`: for audio files conversions, audio play, audio concatenations
+1. `ffmpeg`: for audio files conversions, audio play, audio concatenations
   ```
   sudo apt install ffmpeg 
   ```
@@ -329,7 +327,7 @@ The target OS is Linux.
   sudo apt install mediainfo
   ```
 
-- The package contains command line interface program `jointts`, 
+2. The package contains command line program `jointts`, 
   so you must install the npm package as global:
 
   - use npm package manager repo
@@ -350,8 +348,10 @@ The target OS is Linux.
 
 WORK-IN-PROGRESS / NOT READY.
 
-So far, the project is just a proposal of intents, 
-with a bunch (25%) of features implemented. High-level interface: to be defined. 
+So far, the project is just a pre-alfa, 
+with a bunch (25%) of features implemented. 
+High-level interface has to be defined. 
+
 
 ## License 
 
