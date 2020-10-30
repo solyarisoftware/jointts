@@ -1,0 +1,412 @@
+{
+    "simplified": {
+        "0": {
+            "text": "zero",
+            "filename": "/it/zero.mp3"
+        },
+        "1": {
+            "text": "uno",
+            "filename": "/it/uno.mp3"
+        },
+        "2": {
+            "text": "due",
+            "filename": "/it/due.mp3"
+        },
+        "3": {
+            "text": "tre",
+            "filename": "/it/tre.mp3"
+        },
+        "4": {
+            "text": "quattro",
+            "filename": "/it/quattro.mp3"
+        },
+        "5": {
+            "text": "cinque",
+            "filename": "/it/cinque.mp3"
+        },
+        "6": {
+            "text": "sei",
+            "filename": "/it/sei.mp3"
+        },
+        "7": {
+            "text": "sette",
+            "filename": "/it/sette.mp3"
+        },
+        "8": {
+            "text": "otto",
+            "filename": "/it/otto.mp3"
+        },
+        "9": {
+            "text": "nove",
+            "filename": "/it/nove.mp3"
+        },
+        "a": {
+            "text": "a",
+            "filename": "/it/a.mp3"
+        },
+        "b": {
+            "text": "bi",
+            "filename": "/it/bi.mp3"
+        },
+        "c": {
+            "text": "ci",
+            "filename": "/it/ci.mp3"
+        },
+        "d": {
+            "text": "di",
+            "filename": "/it/di.mp3"
+        },
+        "e": {
+            "text": "é",
+            "filename": "/it/é.mp3"
+        },
+        "f": {
+            "text": "èffe",
+            "filename": "/it/èffe.mp3"
+        },
+        "g": {
+            "text": "gi",
+            "filename": "/it/gi.mp3"
+        },
+        "h": {
+            "text": "àcca",
+            "filename": "/it/àcca.mp3"
+        },
+        "i": {
+            "text": "i",
+            "filename": "/it/i.mp3"
+        },
+        "j": {
+            "text": "i lùnga",
+            "filename": "/it/i_lùnga.mp3"
+        },
+        "k": {
+            "text": "càppa",
+            "filename": "/it/càppa.mp3"
+        },
+        "l": {
+            "text": "èlle",
+            "filename": "/it/èlle.mp3"
+        },
+        "m": {
+            "text": "èmme",
+            "filename": "/it/èmme.mp3"
+        },
+        "n": {
+            "text": "ènne",
+            "filename": "/it/ènne.mp3"
+        },
+        "o": {
+            "text": "ò",
+            "filename": "/it/ò.mp3"
+        },
+        "p": {
+            "text": "pi",
+            "filename": "/it/pi.mp3"
+        },
+        "q": {
+            "text": "cu",
+            "filename": "/it/cu.mp3"
+        },
+        "r": {
+            "text": "èrre",
+            "filename": "/it/èrre.mp3"
+        },
+        "s": {
+            "text": "èsse",
+            "filename": "/it/èsse.mp3"
+        },
+        "t": {
+            "text": "ti",
+            "filename": "/it/ti.mp3"
+        },
+        "u": {
+            "text": "u",
+            "filename": "/it/u.mp3"
+        },
+        "v": {
+            "text": "vu",
+            "filename": "/it/vu.mp3"
+        },
+        "w": {
+            "text": "dóppia vu",
+            "filename": "/it/d_ppia_vu.mp3"
+        },
+        "x": {
+            "text": "ics",
+            "filename": "/it/ics.mp3"
+        },
+        "y": {
+            "text": "ìpsilon",
+            "filename": "/it/ìpsilon.mp3"
+        },
+        "z": {
+            "text": "zèta",
+            "filename": "/it/zèta.mp3"
+        },
+        "á": {
+            "text": "á con accento acuto",
+            "filename": "/it/_con_accento_acuto.mp3"
+        },
+        "à": {
+            "text": "à con accento grave",
+            "filename": "/it/à_con_accento_grave.mp3"
+        },
+        "é": {
+            "text": "é con accento acuto",
+            "filename": "/it/é_con_accento_acuto.mp3"
+        },
+        "è": {
+            "text": "è con accento grave",
+            "filename": "/it/è_con_accento_grave.mp3"
+        },
+        "í": {
+            "text": "í con accento acuto",
+            "filename": "/it/_con_accento_acuto.mp3"
+        },
+        "ì": {
+            "text": "ì con accento grave",
+            "filename": "/it/ì_con_accento_grave.mp3"
+        },
+        "ó": {
+            "text": "ó con accento acuto",
+            "filename": "/it/_con_accento_acuto.mp3"
+        },
+        "ò": {
+            "text": "ò con accento grave",
+            "filename": "/it/ò_con_accento_grave.mp3"
+        },
+        "ú": {
+            "text": "ú con accento acuto",
+            "filename": "/it/_con_accento_acuto.mp3"
+        },
+        "ù": {
+            "text": "ù con accento grave",
+            "filename": "/it/ù_con_accento_grave.mp3"
+        },
+        " ": {
+            "text": "spazio",
+            "filename": "/it/spazio.mp3"
+        },
+        "\t": {
+            "text": "tabulazione",
+            "filename": "/it/tabulazione.mp3"
+        },
+        ".": {
+            "text": "punto",
+            "filename": "/it/punto.mp3"
+        },
+        "·": {
+            "text": "punto centrale",
+            "filename": "/it/punto_centrale.mp3"
+        },
+        ",": {
+            "text": "virgola",
+            "filename": "/it/virgola.mp3"
+        },
+        ";": {
+            "text": "punto e virgola",
+            "filename": "/it/punto_e_virgola.mp3"
+        },
+        ":": {
+            "text": "due punti",
+            "filename": "/it/due_punti.mp3"
+        },
+        "!": {
+            "text": "punto esclamativo",
+            "filename": "/it/punto_esclamativo.mp3"
+        },
+        "?": {
+            "text": "punto interrogativo",
+            "filename": "/it/punto_interrogativo.mp3"
+        },
+        "’": {
+            "text": "virgoletta destra inclinata",
+            "filename": "/it/virgoletta_destra_inclinata.mp3"
+        },
+        "‘": {
+            "text": "virgoletta sinistra inclinata",
+            "filename": "/it/virgoletta_sinistra_inclinata.mp3"
+        },
+        "\"": {
+            "text": "virgolette",
+            "filename": "/it/virgolette.mp3"
+        },
+        "'": {
+            "text": "apostrofo",
+            "filename": "/it/apostrofo.mp3"
+        },
+        "´": {
+            "text": " accento acuto",
+            "filename": "/it/_accento_acuto.mp3"
+        },
+        "`": {
+            "text": " accento grave",
+            "filename": "/it/_accento_grave.mp3"
+        },
+        "”": {
+            "text": "virgolette destre inclinate",
+            "filename": "/it/virgolette_destre_inclinate.mp3"
+        },
+        "“": {
+            "text": "virgolette sinistre inclinate",
+            "filename": "/it/virgolette_sinistre_inclinate.mp3"
+        },
+        "«": {
+            "text": "virgolette doppie aperte",
+            "filename": "/it/virgolette_doppie_aperte.mp3"
+        },
+        "»": {
+            "text": "virgolette doppie chiuse",
+            "filename": "/it/virgolette_doppie_chiuse.mp3"
+        },
+        "(": {
+            "text": "parentesi tonda aperta",
+            "filename": "/it/parentesi_tonda_aperta.mp3"
+        },
+        ")": {
+            "text": "parentesi tonda chiusa",
+            "filename": "/it/parentesi_tonda_chiusa.mp3"
+        },
+        "[": {
+            "text": "parentesi quadra aperta",
+            "filename": "/it/parentesi_quadra_aperta.mp3"
+        },
+        "]": {
+            "text": "parentesi quadra chiusa",
+            "filename": "/it/parentesi_quadra_chiusa.mp3"
+        },
+        "{": {
+            "text": "parentesi graffa aperta",
+            "filename": "/it/parentesi_graffa_aperta.mp3"
+        },
+        "}": {
+            "text": "parentesi graffa chiusa",
+            "filename": "/it/parentesi_graffa_chiusa.mp3"
+        },
+        "@": {
+            "text": "chiocciola",
+            "filename": "/it/chiocciola.mp3"
+        },
+        "*": {
+            "text": "simbolo asterisco",
+            "filename": "/it/simbolo_asterisco.mp3"
+        },
+        "#": {
+            "text": "simbolo cancelletto",
+            "filename": "/it/simbolo_cancelletto.mp3"
+        },
+        "%": {
+            "text": "simbolo percento",
+            "filename": "/it/simbolo_percento.mp3"
+        },
+        "|": {
+            "text": "barra verticale",
+            "filename": "/it/barra_verticale.mp3"
+        },
+        "/": {
+            "text": "barra",
+            "filename": "/it/barra.mp3"
+        },
+        "\\": {
+            "text": "barra retroversa",
+            "filename": "/it/barra_retroversa.mp3"
+        },
+        "£": {
+            "text": "simbolo valuta lira",
+            "filename": "/it/simbolo_valuta_lira.mp3"
+        },
+        "$": {
+            "text": "simbolo valuta dollaro",
+            "filename": "/it/simbolo_valuta_dollaro.mp3"
+        },
+        "&": {
+            "text": "simbolo e commerciale",
+            "filename": "/it/simbolo_e_commerciale.mp3"
+        },
+        "^": {
+            "text": "simbolo cappelletto",
+            "filename": "/it/simbolo_cappelletto.mp3"
+        },
+        "=": {
+            "text": "simbolo uguale",
+            "filename": "/it/simbolo_uguale.mp3"
+        },
+        "-": {
+            "text": "trattino",
+            "filename": "/it/trattino.mp3"
+        },
+        "+": {
+            "text": "simbolo più",
+            "filename": "/it/simbolo_più.mp3"
+        },
+        ">": {
+            "text": "simbolo maggiore",
+            "filename": "/it/simbolo_maggiore.mp3"
+        },
+        "<": {
+            "text": "simbolo minore",
+            "filename": "/it/simbolo_minore.mp3"
+        },
+        "~": {
+            "text": "tilde",
+            "filename": "/it/tilde.mp3"
+        },
+        "—": {
+            "text": "trattino lungo",
+            "filename": "/it/trattino_lungo.mp3"
+        },
+        "_": {
+            "text": "sottolineato",
+            "filename": "/it/sottolineato.mp3"
+        },
+        "¢": {
+            "text": "simbolo di centesimo",
+            "filename": "/it/simbolo_di_centesimo.mp3"
+        },
+        "©": {
+            "text": "simbolo di copyright",
+            "filename": "/it/simbolo_di_copyright.mp3"
+        },
+        "÷": {
+            "text": "simbolo di divisione",
+            "filename": "/it/simbolo_di_divisione.mp3"
+        },
+        "µ": {
+            "text": "simbolo micron",
+            "filename": "/it/simbolo_micron.mp3"
+        },
+        "¶": {
+            "text": "delimitatore di paragrafo",
+            "filename": "/it/delimitatore_di_paragrafo.mp3"
+        },
+        "±": {
+            "text": "simbolo più o meno",
+            "filename": "/it/simbolo_più_o_meno.mp3"
+        },
+        "®": {
+            "text": "simbolo di marchio registrato",
+            "filename": "/it/simbolo_di_marchio_registrato.mp3"
+        },
+        "§": {
+            "text": "delimitatore di sezione",
+            "filename": "/it/delimitatore_di_sezione.mp3"
+        },
+        "™": {
+            "text": "simbolo trademark",
+            "filename": "/it/simbolo_trademark.mp3"
+        },
+        "¥": {
+            "text": "simbolo valuta Yen Giapponese",
+            "filename": "/it/simbolo_valuta_yen_giapponese.mp3"
+        },
+        "¿": {
+            "text": "punto di domanda invertito",
+            "filename": "/it/punto_di_domanda_invertito.mp3"
+        },
+        "¡": {
+            "text": "punto esclamativo invertito",
+            "filename": "/it/punto_esclamativo_invertito.mp3"
+        }
+    }
+}

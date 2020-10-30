@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.4.0
+- new
+  - config/it/
+  - lib/characterSetIt.js
+- modified 
+  - config/characters.json
+  - lib/audioFilenameFromText.js
+  - lib/concatAudioFiles.js
+  - lib/fileHelpers.js
+
 ## Version 0.3.3
 - added command line utility `jointts download googletranslate`
 - command line utility `jointts`
