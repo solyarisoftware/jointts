@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.5.0
+- better explanation in README.md
+- lib/characterSetIt.js contains Italian language character spelling
+- lib/buildConfigJsonIt.js build Italian language grammar config/it/config.json
+- lib/audioFilenameFromText.js updated
+
 ## Version 0.4.0
 - new
   - config/it/
@@ -29,5 +35,3 @@ All notable changes to this project will be documented in this file.
 
 ## Version 0.0.1 - initial commit 
 - edited README.md
-
-
