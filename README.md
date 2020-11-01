@@ -8,7 +8,7 @@ JoinTTS is a simple off-line (on-premise) concatenative TTS nodejs API.
 > that's also the command line program alias.
 > Ah! There’s a funny double meaning in the name.🙄
 
-## Concept
+## Introduction
 
 The goal is to have a super simple (and performing) concatenative TTS
 that joins prerecorded audio files. 
@@ -50,11 +50,13 @@ but the need of a "real-time" responsive speech output.
 
 ## How it works?
 
-### Step 1: off-line language configurations + speech files setup
+### Step 1 - Build language model configurations 
 
 Following configuration files (TODO), 
 all audio files required must be produced, 
 with a direct recording or a downloaded from any third party source.
+
+### Step 2 - off-line speech files production
 
 Audio source files could be made in 2 different ways:
 
@@ -76,7 +78,7 @@ Audio source files could be made in 2 different ways:
   For a personalized voice experience, 
   a voice actor can record all required audio files. TODO 
 
-### Step 2: run-time environment
+### Step 3 - run-time usage
 
 At run-time the main program call joinTTS run-time engine 
 that generates on the fly audio speech files, 
@@ -86,15 +88,13 @@ See functions documentation:
 - function calls [API](doc/API.md)
 - command line program usage [`jointts`](doc/CLI.md)
 
-## Architecture / data flow
-
 ```
           +------------------------------------------+
           |                                          |
           |          joinTTS off-line CLI            |
           |                                          |
           +---------+---------------------+----------+
-                    |                     |
+           step 1   |                     |
           +---------v---------+           |
           |                   |           |
           | language grammar  |           |
@@ -106,7 +106,7 @@ See functions documentation:
           config/it/*.json                |
           config/en/*.json                |
           config/de/*.json                |
-          ...                             |
+          ...                     step 2  |
                     | |          +--------v----------+
                     | +---------->                   |
                     |            |   audio files     |
@@ -120,7 +120,7 @@ See functions documentation:
                     |               audio/it/c.mp3
                     |               audio/it/d.mp3
                     |               ...
-                    |                     |
+           step 3   |                     |
           +---------v---------------------v----------+
  text --> |                                          | --> audio file
           |            joinTTS run-time API          |
