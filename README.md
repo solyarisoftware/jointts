@@ -22,8 +22,7 @@ to be available afterward, at run-time, for fast concatenative audio generation.
 
 Text-to-speech output will be audio files 
 or in-memory binary blobs (nodejs buffers) 
-in a specific audio codec as PCM 
-or [OPUS](https://en.wikipedia.org/wiki/Opus_(audio_format)).
+in a specific audio codec as PCM or OPUS.
 
 Audio recordings could be realized in two ways:
 - by real human voices (voice actors) recordings.
@@ -69,7 +68,7 @@ Audio source files could be made in 2 different ways:
   Using `joint` command line utility, audio files can be generated from texts:
 
   ```bash
-  $ joint downloadtts download gt
+  $ jointts download gt
   ```
  
 - Voice-recordings
@@ -134,7 +133,7 @@ See functions documentation:
 
 ## Installation
 
-1. `ffmpeg`: for audio files conversions, audio play, audio concatenations
+1. ffmpeg, for audio files conversions, audio play, audio concatenations:
 
   ```bash
   sudo apt install ffmpeg 
@@ -143,11 +142,6 @@ See functions documentation:
 
   ```bash
   sudo apt install libopus0 opus-tools
-  ```
-  Optionally, to a nice command line tool to get info about  audio files:
-
-  ```bash
-  sudo apt install mediainfo
   ```
 
 2. The package contains command line program `jointts`, 
