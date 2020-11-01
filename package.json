@@ -1,6 +1,6 @@
 {
   "name": "jointts",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "barinless concatenative on-premise text to speech",
   "main": "index.js",
   "directories": {

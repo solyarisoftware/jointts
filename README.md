@@ -133,33 +133,37 @@ See functions documentation:
 
 ## Installation
 
-1. ffmpeg, for audio files conversions, audio play, audio concatenations:
+### Install ffmpeg
+
+[ffmpeg](https://ffmpeg.org/) is used asd backend engine for all audio files conversions, 
+audio play, audio concatenations.
+
+```bash
+sudo apt install ffmpeg 
+```
+Optionally, to use OPUS codecs:
+
+```bash
+sudo apt install libopus0 opus-tools
+```
+
+# Install this package
+
+The package contains command line program `jointts`, 
+so you must install the npm package as global:
+
+- download this github repo:
 
   ```bash
-  sudo apt install ffmpeg 
-  ```
-  Optionally, to use OPUS codecs:
+  $ git clone https://github.com/solyarisoftware/jointts
+  $ cd jointts && npm link
+  ``` 
+
+- or use npm package manager repo
 
   ```bash
-  sudo apt install libopus0 opus-tools
+  $ npm install -g jointts
   ```
-
-2. The package contains command line program `jointts`, 
-  so you must install the npm package as global:
-
-  - use npm package manager repo
-
-    ```bash
-    $ npm install -g jointts
-    ```
-
-  - or download this github repo:
-
-    ```bash
-    $ git clone https://github.com/solyarisoftware/jointts
-    $ cd jointts && npm link
-    ``` 
-
 
 ## Status
 
