@@ -147,23 +147,23 @@ Optionally, to use OPUS codecs:
 sudo apt install libopus0 opus-tools
 ```
 
-# Install this package
+### Install this package
 
 The package contains command line program `jointts`, 
 so you must install the npm package as global:
 
-- download this github repo:
+Download this github repo:
 
-  ```bash
-  $ git clone https://github.com/solyarisoftware/jointts
-  $ cd jointts && npm link
-  ``` 
+```bash
+$ git clone https://github.com/solyarisoftware/jointts
+$ cd jointts && npm link
+``` 
 
-- or use npm package manager repo
+Or use npm package manager repo
 
-  ```bash
-  $ npm install -g jointts
-  ```
+```bash
+$ npm install -g jointts
+```
 
 ## Status
 
