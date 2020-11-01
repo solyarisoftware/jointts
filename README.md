@@ -138,7 +138,7 @@ See functions documentation:
 
   ```bash
   sudo apt install ffmpeg 
-  ```bash
+  ```
   Optionally, to use OPUS codecs:
 
   ```bash
