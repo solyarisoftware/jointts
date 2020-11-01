@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.6.0
+- documentation rework, creating multiple files in doc/
+
 ## Version 0.5.0
 - better explanation in README.md
 - lib/characterSetIt.js contains Italian language character spelling
