@@ -135,15 +135,18 @@ See functions documentation:
 ## Installation
 
 1. `ffmpeg`: for audio files conversions, audio play, audio concatenations
-  ```
+
+  ```bash
   sudo apt install ffmpeg 
-  ```
+  ```bash
   Optionally, to use OPUS codecs:
-  ```
+
+  ```bash
   sudo apt install libopus0 opus-tools
   ```
   Optionally, to a nice command line tool to get info about  audio files:
-  ```
+
+  ```bash
   sudo apt install mediainfo
   ```
 
@@ -152,13 +155,13 @@ See functions documentation:
 
   - use npm package manager repo
 
-    ```
+    ```bash
     $ npm install -g jointts
     ```
 
   - or download this github repo:
 
-    ```
+    ```bash
     $ git clone https://github.com/solyarisoftware/jointts
     $ cd jointts && npm link
     ``` 

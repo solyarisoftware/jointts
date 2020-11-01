@@ -1,6 +1,6 @@
 # `jointts` command line program 
 
-```
+```bash
 $ jointts
 
 Usage:
@@ -12,7 +12,7 @@ Usage:
 ```
 
 
-```
+```bash
 $ jointts
 
 Usage:
