@@ -17,8 +17,8 @@ The system is suitable for applications with a small grammar
 
 The speech is produced by concatenating prepared audio files sources, 
 for letters, words, template literals, entire phrases. 
-All audio files "chunks" needed are prepared "off-line",
-to be available afterward, at run-time, for fast concatenative audio generation. 
+All audio files "chunks" needed are prepared "in advance",
+to be available afterward, at run-time, for a fast concatenative audio generation. 
 
 Text-to-speech output will be audio files 
 or in-memory binary blobs (nodejs buffers) 
@@ -29,6 +29,10 @@ Audio recordings could be realized in two ways:
   This is specially useful by example in language education apps, 
   for special purposes, as syllables pronunciation.
 - by a synthetic voice ( by example using Google Translate TTS)
+ 
+  > Note that using a cloud-based TTS to generate audio chunks 
+  > is more a test system to workaround the availability of real human voice recording.
+  > Please read [disclaimer](#discalimer) section for details.
 
 Speech generation is language-dependent. 
 JoinTTS can be configured to manage many natural languages.
@@ -41,7 +45,7 @@ Input texts could be managed as characters, words, phrases.
 - Template literals
 - Words concatenation 
 
-Documentation: [Text tokenization](doc/tokenization.md).
+Documentation: [Text segmentation](doc/segmentation.md).
 
 The target environment is any sort of embedded system 
 (local/on-premise/off-line/no-cloud), with poor CPU resources, 
@@ -56,9 +60,14 @@ Following configuration files (TODO),
 all audio files required must be produced, 
 with a direct recording or a downloaded from any third party source.
 
-### Step 2 - off-line speech files production
+### Step 2 - Speech audio files recordings/feed
 
 Audio source files could be made in 2 different ways:
+- Voice-recordings
+
+  For a personalized voice experience, 
+  a voice actor can record all required audio files. 
+  TODO 
 
 - Synthetic voices files
 
@@ -73,14 +82,9 @@ Audio source files could be made in 2 different ways:
   $ jointts download gt
   ```
  
-- Voice-recordings
-
-  For a personalized voice experience, 
-  a voice actor can record all required audio files. TODO 
-
 ### Step 3 - run-time usage
 
-At run-time the main program call joinTTS run-time engine 
+At run-time the main program call joints run-time engine 
 that generates on the fly audio speech files, 
 concatenating available audio chunks.
 
@@ -135,7 +139,7 @@ See functions documentation:
 
 ### Install ffmpeg
 
-[ffmpeg](https://ffmpeg.org/) is used asd backend engine for all audio files conversions, 
+[ffmpeg](https://ffmpeg.org/) is used acid backend engine for all audio files conversions, 
 audio play, audio concatenations.
 
 ```bash
@@ -164,6 +168,18 @@ Or use npm package manager repo
 ```bash
 $ npm install -g jointts
 ```
+
+
+## Disclaimer
+
+JointTTS run-time usage is intended to basically run on a private environment. 
+You are in charge to manage privacy, permissions, licenses, of all your files.
+If you use cloud-based TTS platforms (as Amazon Polly, Google TTS, etc.) 
+to download synthetic voice files in the preparation step,
+it’s your responsibility to not break any license or copyright.
+In the same way, if you use voice recordings of other people, 
+please assure to have permissions to do it.
+
 
 ## Status
 

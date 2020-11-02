@@ -2,7 +2,8 @@
 
 All notable changes to this project will be documented in this file. 
 
-## Version 0.6.0
+## Version 0.6.7
+- added disclaimer section in README.md
 - documentation rework, creating multiple files in doc/
 
 ## Version 0.5.0
