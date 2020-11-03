@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.7.0
+
+- added subcommand `jointts convert`
+  - modified bin/jointts.js
+  - modified lib/convertAudioFormat.js
+  - new      index.js
+
 ## Version 0.6.7
 - added disclaimer section in README.md
 - documentation rework, creating multiple files in doc/

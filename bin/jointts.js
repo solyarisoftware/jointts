@@ -32,7 +32,16 @@ switch ( command ) {
     break
 
   case 'convert':
-    convertAudioFormat(commands.slice(1), args)
+    convertAudioFormat(commands.slice(1), args, programName + ' convert')
+      .then( result => {
+
+        if (result.exit == 0)
+          console.log( result )
+        else
+          console.error( `command ${result.fullcmd} failed with exit code: ${result.exit}` )
+      
+      })
+      .catch( data => console.log( `command failed with error. See: ${data}` ))
     break
 
   default:
@@ -45,10 +54,15 @@ switch ( command ) {
 function usage() {
   return ( 
     '\n' +
-    'Usage:\n\n' +
-    `    ${programName} download gt - downlaod MP3 file using Goole Translate TTS\n` +
+    'jointts, a brainless off-line concatenative text to speech.\n' +
+    '(c) Giorgio Robino, 2020. giorgio.robino@gmail.com\n' +
     '\n' +
-    `    ${programName} help        - show this help\n` +
+    'Usage:\n\n' +
+    `    ${programName} download gt   download Google Translate TTS MP3 file\n` +
+    '\n' +
+    `    ${programName} convert       convert audio file codec\n` +
+    '\n' +
+    `    ${programName} help          show this help\n` +
     '\n'
   )  
 }  
