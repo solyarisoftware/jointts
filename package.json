@@ -1,6 +1,6 @@
 {
   "name": "jointts",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "brainless off-line concatenative text to speech",
   "main": "index.js",
   "directories": {
@@ -22,7 +22,7 @@
     "Text To Speech",
     "on-premise concatenative TTS"
   ],
-  "author": "Giorgio Robino <giorgio.robino@gmail.com> (https://convcomp.it)",
+  "author": "Giorgio Robino <giorgio.robino@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/solyarisoftware/concatts/issues"

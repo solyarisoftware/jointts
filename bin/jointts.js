@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+const { info } = require('../lib/info')
 const { getArgs } = require('../lib/getArgs')
 const { downloadGoogleTransalteMP3 } = require('../lib/googleTranslateTTS')
+const { printLanguages } = require('../lib/googleTranslateLanguages')
 const { convertAudioFormat } = require('../lib/convertAudioFormat')
 
 const programNamePathItems = process.argv[1].split('/')
@@ -21,18 +23,27 @@ switch ( command ) {
 
       case 'gt':
       case 'googletranslate':
-        downloadGoogleTransalteMP3(commands.slice(2), args)
+        console.log( info() )
+        downloadGoogleTransalteMP3(commands.slice(2), args, `${programName} ${command} ${subCommand}`)
         break
 
       default:
+        console.log( info() )
         console.log( usage() )
         break
 
     }    
     break
 
+  case 'isocodes':
+  case 'languages':
+    console.log( info() )
+    printLanguages()
+    break
+
   case 'convert':
-    convertAudioFormat(commands.slice(1), args, programName + ' convert')
+    console.log( info() )
+    convertAudioFormat(commands.slice(1), args, `${programName} ${command}`)
       .then( result => {
 
         if (result.exit == 0)
@@ -45,6 +56,7 @@ switch ( command ) {
     break
 
   default:
+    console.log( info() )
     console.log( usage() )
     break
 
@@ -53,16 +65,10 @@ switch ( command ) {
 
 function usage() {
   return ( 
-    '\n' +
-    'jointts, a brainless off-line concatenative text to speech.\n' +
-    '(c) Giorgio Robino, 2020. giorgio.robino@gmail.com\n' +
-    '\n' +
     'Usage:\n\n' +
     `    ${programName} download gt   download Google Translate TTS MP3 file\n` +
-    '\n' +
+    `    ${programName} languages     list of ISO-639-1 language codes (in Google Translate)\n` +
     `    ${programName} convert       convert audio file codec\n` +
-    '\n' +
-    `    ${programName} help          show this help\n` +
     '\n'
   )  
 }  

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.8.0
+
+modified files:
+- bin/jointts.js
+- lib/convertAudioFormat.js
+- lib/googleTranslateLanguages.js
+- lib/googleTranslateTTS.js
+
+new files: 
+- TODO.md
+- lib/buildCharactersAudio.js
+- lib/characterSet.js
+- lib/info.js
+
 ## Version 0.7.0
 
 - added subcommand `jointts convert`
