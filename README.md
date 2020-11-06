@@ -3,6 +3,7 @@
 Brainless concatenative text to speech.
 
 JoinTTS is a simple off-line (on-premise) concatenative TTS nodejs API.
+
 > `jointts` is the formal name of this project, 
 > but you can call it simply `joint`,
 > that's also the command line program alias.
@@ -60,9 +61,33 @@ Following configuration files (TODO),
 all audio files required must be produced, 
 with a direct recording or a downloaded from any third party source.
 
-### Step 2 - Speech audio files recordings/feed
+```
+          +-------------------+
+          |                   |
+          |    joinTTS CLI    |
+          |                   |
+          +---------+---------+
+                    |
+          +---------v---------+
+          |                   |
+          | language grammar  |
+          | config generator  |
+          |                   |
+          +---------+---------+
+                    |
+                    v
+            config/it/*.json
+            config/en/*.json
+            config/de/*.json
+                    |
+                    v
+```
+
+
+### Step 2 - Build speech audio files
 
 Audio source files could be made in 2 different ways:
+
 - Voice-recordings
 
   For a personalized voice experience, 
@@ -81,6 +106,30 @@ Audio source files could be made in 2 different ways:
   ```bash
   $ jointts download gt
   ```
+```
+                                 +------------------+
+                                 |                  |
+                                 |    joinTTS CLI   |
+                                 |                  |
+                                 +---------+--------+
+            config/it/*.json               |
+            config/en/*.json               |
+            config/de/*.json               |
+                    | |          +---------v--------+
+                    | +---------->                  |
+                    |            |    audio files   |
+                    |            |    production    |
+                    |            |                  |
+                    |            +--------+---------+
+                    |                     |
+                    |                     v
+                    |              audio/it/a.mp3
+                    |              audio/it/b.mp3
+                    |              audio/it/c.mp3
+                    |              ...
+                    |                     |
+                    v                     v
+```
  
 ### Step 3 - run-time usage
 
@@ -88,95 +137,74 @@ At run-time the main program call joints run-time engine
 that generates on the fly audio speech files, 
 concatenating available audio chunks.
 
+```
+           config/it/*.json                 
+           config/en/*.json                 
+           config/de/*.json                 
+                   |               audio/it/a.mp3
+                   |               audio/it/b.mp3
+                   |               audio/it/c.mp3
+                   |               ...
+                   |                     |
+         +---------v---------------------v----------+
+         |                                          |
+text --> |            joinTTS run-time API          | --> audio file
+         |                                          | --> audio buffer
+         +------------------------------------------+
+         |                  ffmpeg                  |
+         +------------------------------------------+
+```
+
 See functions documentation: 
+
 - function calls [API](doc/API.md)
 - command line program usage [`jointts`](doc/CLI.md)
-
-```
-          +------------------------------------------+
-          |                                          |
-          |          joinTTS off-line CLI            |
-          |                                          |
-          +---------+---------------------+----------+
-           step 1   |                     |
-          +---------v---------+           |
-          |                   |           |
-          | language grammar  |           |
-          | config generator  |           |
-          |                   |           |
-          +---------+---------+           |
-                    |                     |
-                    v                     |
-          config/it/*.json                |
-          config/en/*.json                |
-          config/de/*.json                |
-          ...                     step 2  |
-                    | |          +--------v----------+
-                    | +---------->                   |
-                    |            |   audio files     |
-                    |            |   production      |
-                    |            |                   |
-                    |            +--------+----------+
-                    |                     |
-                    |                     v
-                    |               audio/it/a.mp3
-                    |               audio/it/b.mp3
-                    |               audio/it/c.mp3
-                    |               audio/it/d.mp3
-                    |               ...
-           step 3   |                     |
-          +---------v---------------------v----------+
- text --> |                                          | --> audio file
-          |            joinTTS run-time API          |
-          |                                          | --> audio buffer
-          +------------------------------------------+
-          |                  ffmpeg                  |
-          +------------------------------------------+
-```
 
 
 ## Installation
 
-### Install ffmpeg
+1. Install ffmpeg
 
-[ffmpeg](https://ffmpeg.org/) is used acid backend engine for all audio files conversions, 
-audio play, audio concatenations.
+  [ffmpeg](https://ffmpeg.org/) is used acid backend engine for all audio files conversions, 
+  audio play, audio concatenations.
 
-```bash
-sudo apt install ffmpeg 
-```
-Optionally, to use OPUS codecs:
+  ```bash
+  sudo apt install ffmpeg 
+  ```
+  Optionally, to use OPUS codecs:
 
-```bash
-sudo apt install libopus0 opus-tools
-```
+  ```bash
+  sudo apt install libopus0 opus-tools
+  ```
 
-### Install this package
+2. Install this package
 
-The package contains command line program `jointts`, 
-so you must install the npm package as global:
+  The package contains command line program `jointts`, 
+  so you must install the npm package as global:
 
-Download this github repo:
+  Download this github repo:
 
-```bash
-$ git clone https://github.com/solyarisoftware/jointts
-$ cd jointts && npm link
-``` 
+  ```bash
+  $ git clone https://github.com/solyarisoftware/jointts
+  $ cd jointts && npm link
+  ``` 
 
-Or use npm package manager repo
+  Or use npm package manager repo
 
-```bash
-$ npm install -g jointts
-```
+  ```bash
+  $ npm install -g jointts
+  ```
 
 
 ## Disclaimer
 
 JointTTS run-time usage is intended to basically run on a private environment. 
 You are in charge to manage privacy, permissions, licenses, of all your files.
+
 If you use cloud-based TTS platforms (as Amazon Polly, Google TTS, etc.) 
 to download synthetic voice files in the preparation step,
 it’s your responsibility to not break any license or copyright.
+
 In the same way, if you use voice recordings of other people, 
 please assure to have permissions to do it.
 
@@ -186,7 +214,7 @@ please assure to have permissions to do it.
 WORK-IN-PROGRESS / NOT READY.
 
 So far, the project is a proof-of-concept, 
-in pre-alfa stage, with 50% of features implemented.
+in pre-alfa stage, with 60% of features implemented.
 Smart high-level usage has to be defined. 
 
 

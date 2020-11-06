@@ -132,7 +132,7 @@
         },
         "w": {
             "text": "dóppia vu",
-            "file": "d_ppia_vu.mp3"
+            "file": "dóppia_vu.mp3"
         },
         "x": {
             "text": "ics",
@@ -148,7 +148,7 @@
         },
         "á": {
             "text": "á con accento acuto",
-            "file": "_con_accento_acuto.mp3"
+            "file": "á_con_accento_acuto.mp3"
         },
         "à": {
             "text": "à con accento grave",
@@ -164,7 +164,7 @@
         },
         "í": {
             "text": "í con accento acuto",
-            "file": "_con_accento_acuto.mp3"
+            "file": "í_con_accento_acuto.mp3"
         },
         "ì": {
             "text": "ì con accento grave",
@@ -172,7 +172,7 @@
         },
         "ó": {
             "text": "ó con accento acuto",
-            "file": "_con_accento_acuto.mp3"
+            "file": "ó_con_accento_acuto.mp3"
         },
         "ò": {
             "text": "ò con accento grave",
@@ -180,7 +180,7 @@
         },
         "ú": {
             "text": "ú con accento acuto",
-            "file": "_con_accento_acuto.mp3"
+            "file": "ú_con_accento_acuto.mp3"
         },
         "ù": {
             "text": "ù con accento grave",
@@ -410,7 +410,5 @@
             "text": "punto esclamativo invertito",
             "file": "punto_esclamativo_invertito.mp3"
         }
-    },
-    "words": {},
-    "phrases": {}
+    }
 }
