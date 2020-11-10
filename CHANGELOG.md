@@ -2,13 +2,15 @@
 
 All notable changes to this project will be documented in this file. 
 
-## Version 0.9.0
+## Version 0.10.0
 
 Major new feature: 
 - spelling (charByChar) function
+- com/pause
 
 modified files:
 - README.md
+- TODO.md
 - config/it/characters.json
 - lib/audioFilenameFromText.js
 - lib/buildCharactersAudio.js
@@ -17,7 +19,7 @@ modified files:
 new files: 
 - doc/config.md
 - lib/buildConfigJson.js
-- lib/charByChar.js
+- lib/spelling.js
 - lib/characters.js
 
 ## Version 0.8.0

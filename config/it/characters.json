@@ -188,7 +188,7 @@
         },
         " ": {
             "text": "spazio",
-            "file": "spazio.mp3"
+            "file": "PAUSE_0.25.mp3"
         },
         "\t": {
             "text": "tabulazione",

@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# https://ffmpeg.org/ffmpeg-filters.html#toc-anullsrc
+
+# https://ffmpeg.org/ffmpeg-utils.html#toc-Examples-1
+
+# The following examples are all valid time duration:
+# 
+# ‘55’
+# 55 seconds
+# 
+# ‘0.2’
+# 0.2 seconds
+# 
+# ‘200ms’
+# 200 milliseconds, that’s 0.2s
+# 
+# ‘200000us’
+# 200000 microseconds, that’s 0.2s
+# 
+# ‘12:03:45’
+# 12 hours, 03 minutes and 45 seconds
+# 
+# ‘23.189’
+# 23.189 milliseconds
+
+if [ $# -eq 0 ]
+  then
+    echo
+    echo "create a pause, a silence audio file (MP3) of specified number of milliseconds"
+    echo
+    echo "usage: $0 <time duration (in seconds)> <directory path>"
+    echo
+    echo "example: $0 2"
+    echo "example: $0 0.5 tmp/"
+    echo
+    exit
+fi
+
+timeDuration=$1
+directoryPath=$2
+
+suffix=mp3
+
+# https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate
+#https://trac.ffmpeg.org/wiki/Encode/MP3
+bitrate=64k
+samplingRate=24000
+outputFile="${directoryPath}PAUSE_${timeDuration}.${suffix}"
+
+  #-b:a $bitrate -minrate $bitrate -maxrate $bitrate -bufsize $bitrate \
+ffmpeg \
+  -f lavfi \
+  -i anullsrc=r=$samplingRate:cl=mono \
+  -t $timeDuration \
+  -b:a $bitrate -minrate $bitrate -maxrate $bitrate \
+  -codec:a libmp3lame \
+  $outputFile -y
+
+echo
+echo "created file: $outputFile"
+echo
