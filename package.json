@@ -1,6 +1,6 @@
 {
   "name": "jointts",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "brainless off-line concatenative text to speech",
   "main": "index.js",
   "directories": {
@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/solyarisoftware/concatts#readme",
   "dependencies": {
-    "google-tts-api": "0.0.5"
+    "google-tts-api": "^2.0.1"
   }
 }

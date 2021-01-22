@@ -21,21 +21,6 @@ $ jointts download gt
 jointts, brainless off-line concatenative text to speech
 v. 0.9.0, (C) Giorgio Robino <giorgio.robino@gmail.com>
 
-Usage:
-
-    jointts download gt   download Google Translate TTS MP3 file
-    jointts languages     list of ISO-639-1 language codes (in Google Translate)
-    jointts convert       convert audio file codec
-
-
-$ exit
-
-[No write since last change]
-$ jointts download gt
-
-jointts, brainless off-line concatenative text to speech
-v. 0.9.0, (C) Giorgio Robino <giorgio.robino@gmail.com>
-
 usage:
 
     jointts download gt <sentence to elaborate> \

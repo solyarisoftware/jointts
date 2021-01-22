@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.11.0
+- google-tts-api updated to version "^2.0.1"
+
 ## Version 0.10.0
 
 Major new feature: 
