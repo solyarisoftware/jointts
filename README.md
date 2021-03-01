@@ -239,7 +239,7 @@ Smart high-level usage has to be defined.
 
 ## License 
 
-[MIT](LICENSE.md) (c) Giorgio Robino
+[MIT](LICENSE) (c) Giorgio Robino
 
 ---
 
