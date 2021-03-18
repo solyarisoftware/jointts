@@ -2,7 +2,7 @@
 
 Input texts could be "segmented" (and configured) in different parts: characters, words, phrases.
 
-- Immutable phrases
+- Static phrases
 - Template literals
 - Word-by-word concatenation 
 - Character-by-character spelling
@@ -13,7 +13,7 @@ It's the simplest scenario: you have a list of static, immutable, ready done, ph
 ```
 Looks like her company has three containers set to sail for tonight.
 ```
-The above sentence corresponds to
+The above sentence corresponds to:
 
 - an audio (speech) file with some naming convention 
 
@@ -32,26 +32,38 @@ const fileName = ttsfile('Looks like her company has three containers set to sai
 ## Template literals
 
 Template literals are string literals allowing embedded expressions. 
-They are static phrases containing also entities to be resolved at run-time. By example:
+They are static phrases containing also variable parts (entities) to be resolved at run-time. 
+By example:
 ```
 Container JL1349-76 has been cleared for pick-up.
 ```
 
 in the sentence up here, the entity `JL1349-76` is a domain specific code 
-(a shipping container code), to be spelled as a `{alphanumeric_code}`. 
+(a shipping container code), to be spelled as a `{alphanumericCode}`. 
 At the configuration level, a template literal could have a syntax like: 
 ```
-Container {alphanumeric_code} has been cleared for pick-up.
+Container {alphanumericCode} has been cleared for pick-up.
 ```
 
 That "template literal" be a concatenation of 3 strings component parts:
-- `Container`, a static string
-- ` {alphanumeric_code} `, an alphanumeric code to be spelled char-by-char
-- `has been cleared for pick-up.`, a static string
+- `Container `, a static string
+- `{alphanumericCode}`, an alphanumeric code to be spelled char-by-char
+- ` has been cleared for pick-up.`, a static string
 
 At run-time, the TTS translation function must recognize the template literal,
 concatenating the sequences.
 
+A possible API could be somthing like:
+
+```javascript
+const {ttsfile} = require('jointts')
+const fileName = ttsfile(
+  'Container {alphanumericCode} has been cleared for pick-up.', 
+  'en', 
+  { alphanumericCode: 'JL1349-76' } 
+)
+// -> 'Container JL1349-76 has been cleared for pick-up..ogg'
+```
 
 ## Words concatenation 
 
@@ -59,6 +71,7 @@ Phrases are built concatenating words and or letters
 (that is the general case of concatenative text-to-speech).
 Apparently it's a "worst case" because 
 the system has to preset all the words of the grammar.
+
 In the example: 
 ```
 Container JL1349-76 has been cleared for pick-up.
@@ -132,6 +145,23 @@ three
 eight
 three
 ```
+
+or simply:
+```
+Charli
+Sierra
+Quebec
+Uniform
+three
+zero
+five
+four
+three
+eight
+three
+```
+
+
 
 ---
 
