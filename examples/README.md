@@ -4,13 +4,13 @@
 
 Here below some alphanumeric codes spelling examples, in Italian language.
 
-- `CSQU3054383` [listen🔉](./CSQU3054383.mp3)
+- 🔉 [`CSQU3054383`](CSQU3054383.mp3)
 
   Short spelling: each letter is spelled shortly. No case sensitive.
  
   Listen from CLI with command: `com/play examples/CSQU3054383.mp3`
 
-- `CSQU3054383` [listen🔉](./CSQU3054383_long.mp3)
+- 🔉 [`CSQU3054383`](CSQU3054383_long.mp3)
  
   Long spelling: each letter is spelled with the phonetic word code 
   [Alfabetico telefonico Italiano](https://it.wikipedia.org/wiki/Alfabeto_telefonico_italiano). 
@@ -18,7 +18,7 @@ Here below some alphanumeric codes spelling examples, in Italian language.
 
   Listen from CLI with command: `com/play examples/CSQU3054383_long.mp3`
 
-- `JL1349-76 [45A/MU4]` [listen🔉](./'JL1349-76 [45AslashMU4].mp3')
+- 🔉 [`JL1349-76 [45A/MU4]`](JL1349-76%20%5B45AslashMU4%5D.mp3)
  
   Long spelling: each letter is spelled with the phonetic word code 
   [Alfabetico telefonico Italiano](https://it.wikipedia.org/wiki/Alfabeto_telefonico_italiano). 
@@ -26,7 +26,7 @@ Here below some alphanumeric codes spelling examples, in Italian language.
 
   Listen from CLI with command: `com/play 'examples/JL1349-76 [45AslashMU4].mp3'`
 
-- `RAIU 690011 4 25 U1.mp3` [listen🔉](./'RAIU 690011 4 25 U1.mp3')
+- 🔉 [`RAIU 690011 4 25 U1.mp3`](RAIU%20690011%204%2025%20U1.mp3)
  
   Long spelling: each letter is spelled with the phonetic word code 
   [Alfabetico telefonico Italiano](https://it.wikipedia.org/wiki/Alfabeto_telefonico_italiano). 
