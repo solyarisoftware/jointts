@@ -1,6 +1,6 @@
 # Examples
 
-## Spelling examples 
+## Spelling alphanumeric codes
 
 Here below some alphanumeric codes spelling examples, in Italian language.<br>
 Short spelling: each letter is spelled shortly. No case sensitive.<br>
