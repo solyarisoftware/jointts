@@ -4,15 +4,12 @@ Session.vim
 # Dependency directories
 node_modules/
 
-# internal usage bash commands directory
-mycom/
-
-audio/**/*.opus
-audio/**/*.webm
-audio/**/*.mp3
-audio/**/*.wav
-audio/**/*.ogg
-audio/**/*.pcm
+audio/it/opus
+audio/it/*.webm
+audio/it/*.mp3
+audio/it/*.wav
+audio/it/*.ogg
+audio/it/*.pcm
 
 # temporary files
 tmp/

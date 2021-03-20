@@ -133,10 +133,10 @@ sii es kiu iu three zero five four three eight three
 
 Whereas, using the NATO phonetic alphabet:
 ```
-sii for Charli
-es for Sierra
-kiu for Quebec
-iu for Uniform
+Charli for sii 
+Sierra for es
+Quebec for kiu
+Uniform for iu
 three
 zero
 five

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.12.0
+
+- modified config/it/characters.json
+- modified com/pause
+- modified com/play
+- modified doc/segmentation.md
+- modified lib/buildCharactersAudio.js
+- modified lib/buildConfigJson.js
+- spelling (charByChar) function renamed: lib/charbychar.js
+- added examples/ containing spelling examples
+
 ## Version 0.11.1
 
 - google-tts-api updated to version "^2.0.1"

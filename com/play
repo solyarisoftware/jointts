@@ -16,4 +16,4 @@ if [ $# -eq 0 ]
     exit
 fi
 
-ffplay -nodisp -autoexit -hide_banner -loglevel panic $1
+ffplay -nodisp -autoexit -hide_banner -loglevel panic "$1"
