@@ -214,6 +214,18 @@ See functions documentation:
   $ npm install -g jointts
   ```
 
+## 👂 Examples 
+
+Listen [here](examples/README.md) examples of spelling audio rendering for alphanumeric codes! 
+
+## 🛠 Status
+
+WORK-IN-PROGRESS / DRAFT.
+
+So far, the project is a proof-of-concept, 
+in pre-alfa stage, with 60% of features implemented.
+Smart high-level usage has to be defined. 
+
 
 ## ⚠️  Disclaimer
 
@@ -226,15 +238,6 @@ it’s your responsibility to not break any license or copyright.
 
 In the same way, if you use voice recordings of other people, 
 please assure to have permissions to do it.
-
-
-## Status
-
-WORK-IN-PROGRESS / NOT READY.
-
-So far, the project is a proof-of-concept, 
-in pre-alfa stage, with 60% of features implemented.
-Smart high-level usage has to be defined. 
 
 
 ## License 
