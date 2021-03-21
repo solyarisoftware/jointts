@@ -55,8 +55,8 @@ See [Text segmentation](doc/segmentation.md) doc.
 
 - 🎧 [`RAIU 690011 4 25 U1`](RAIU%20690011%204%2025%20U1.mp3)
  
-  The alphanumeric code (a shipping container code in a complete ISO6346 format) contains letters 
-  (`a`, `A`, `B`, `b`, etc.), digits (`1`,`2`, etc.), blanks (` `).<br>
+  The alphanumeric code (a shipping container code in a complete ISO6346 format) contains letters: 
+  `a`  `A`  `B`  `b` etc., digits: `1` `2` etc., blanks: ` `.<br>
   Long spelling.<br>
   No case sensitive.<br>
   To listen from CLI with command: 
@@ -66,7 +66,7 @@ See [Text segmentation](doc/segmentation.md) doc.
 
 - 🎧 [`JL1349-76 [45A/MU4]`](JL1349-76%20%5B45AslashMU4%5D.mp3)
  
-  The alphanumeric code contains letters, digits, blanks and special symbols as `-`, `/`, `[`, `]`.<br>
+  The alphanumeric code contains letters, digits, blanks and special symbols as: `-` `/` `[` `]`.<br>
   No case sensitive.<br>
   To listen from CLI with command: 
   ```bash
