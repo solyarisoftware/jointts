@@ -11,37 +11,51 @@ JoinTTS is a simple off-line (on-premise) concatenative TTS nodejs API.
 
 ## Introduction
 
-The goal is to have a super simple (and performing) concatenative TTS
-that joins prerecorded audio files. 
+The goal is to build a super simple efficient concatenative speech synthesis 
+that at run-time concatenates prerecorded local audio files, without any cloud access. 
 
 The system is suitable for applications with a small grammar 
 (a limited set of sentences/words) for a semi-static speech generation.
 
+An example of application could be an embedded system TTS made by mainly fixed output sentences, 
+but containing a small amount of variable/dynamic parts, as entities (codes, names) in template literals.
+
+The target environment is so any sort of embedded system (on-premise/off-line), with poor CPU resources, 
+but the need of a real-time responsive speech output.
+
 The speech is produced by concatenating prepared audio files sources, 
 for letters, words, template literals, entire phrases. 
-All audio files "chunks" needed are prepared "in advance",
-to be available afterward, at run-time, for a fast concatenative audio generation. 
+All audio files "chunks" needed are prepared offline, to be available afterward, 
+at run-time, for a fast concatenative audio generation. 
 
-Text-to-speech output will be audio files 
+Text-to-speech output are audio files 
 or in-memory binary blobs (nodejs buffers) 
 in a specific audio codec as PCM or OPUS.
 
-Audio recordings could be realized in two ways:
+Audio recordings could be realized/sourced in two ways, using in alternative:
 
-- by real human voices (voice actors) recordings.
+- Real human voices (by voice actors) recordings
+
   This is specially useful by example in language education apps, 
   for special purposes, as syllables pronunciation.
 
-- by a synthetic voice ( by example using Google Translate TTS)
+- Synthetic voices recording
+
+  You can by example use Google Translate TTS, or any TTS of your choice to prepare speech files/buffers)
  
   > 💡 Note that using a cloud-based TTS to generate audio chunks 
   > is more a test system to workaround the availability of real human voice recording.
   > Please read [disclaimer](#discalimer) section for details.
 
-Speech generation is language-dependent. 
+
+### Multi language
+
+Speech generation is language-dependent.
 
 JoinTTS can be configured to manage many natural languages.
 See [Multi-language](doc/multilanguage.md) doc.
+
+### Segmentation 
 
 Input texts could be managed as characters, words, phrases.
 
@@ -51,10 +65,6 @@ Input texts could be managed as characters, words, phrases.
 - Template literals
 
 See [Text segmentation](doc/segmentation.md) doc.
-
-The target environment is any sort of embedded system 
-(local/on-premise/off-line/no-cloud), with poor CPU resources, 
-but the need of a "real-time" responsive speech output.
 
 
 ## How it works?
@@ -106,7 +116,7 @@ Configuration files are language-dependent:
 
 Audio source files can be made in 2 different ways:
 
-- 🎙 Voice-recordings
+- 🎙 Human voice recordings
 
   For a personalized voice experience, 
   a voice actor can record all required audio files. 
@@ -119,8 +129,9 @@ Audio source files can be made in 2 different ways:
   A synthetic voice file can be made using any cloud-based TTS 
   as Amazon Polly, Google Cloud Platform Text-to-Speech, etc.
 
-  joinTTS use free of charge [Google Translate Speech library](https://github.com/zlargon/google-tts).
-  Using `jointts` (or `joint`) command line utility, audio files can be generated from texts:
+  joinTTS use, for example only, the [Google Translate Speech library](https://github.com/zlargon/google-tts).
+  Whit `jointts` (or `joint`) command line utility, speech MP3 files 
+  (containing the Google Translate synthetic voice) can be generated from texts:
 
   ```bash
   $ jointts download gt
@@ -168,7 +179,7 @@ concatenating available audio chunks.
          +---------v---------------------v----------+
          |                                          |
 text --> |            joinTTS run-time API          | --> audio file
-         |                                          | --> audio buffer
+'ABC123' |                                          |     ABC123.mp3
          +------------------------------------------+
          |                  ffmpeg                  |
          +------------------------------------------+
@@ -214,9 +225,9 @@ See functions documentation:
   $ npm install -g jointts
   ```
 
-## 👂 Examples 
+## 👂 Listen audio rendering examples 
 
-Listen [here](examples/README.md) examples of spelling audio rendering for alphanumeric codes! 
+Listen [here](examples/README.md) examples of spelling audio rendering for alphanumeric codes. 
 
 ## 🛠 Status
 
