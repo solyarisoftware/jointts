@@ -1,0 +1,366 @@
+{
+    "homedirectory": "audio",
+    "language": "en",
+    "characters": {
+      "0": {
+          "speech": "zero",
+          "file": "0.mp3"
+      },
+      "1": {
+          "speech": "one",
+          "file": "1.mp3"
+      },
+      "2": {
+          "speech": "two",
+          "file": "2.mp3"
+      },
+      "3": {
+          "speech": "three",
+          "file": "3.mp3"
+      },
+      "4": {
+          "speech": "four",
+          "file": "4.mp3"
+      },
+      "5": {
+          "speech": "five",
+          "file": "5.mp3"
+      },
+      "6": {
+          "speech": "six",
+          "file": "6.mp3"
+      },
+      "7": {
+          "speech": "seven",
+          "file": "7.mp3"
+      },
+      "8": {
+          "speech": "eight",
+          "file": "8.mp3"
+      },
+      "9": {
+          "speech": "nine",
+          "file": "9.mp3"
+      },
+      "a": {
+          "speech": "alfa for a",
+          "file": "a.mp3"
+      },
+      "b": {
+          "speech": "bravo for b",
+          "file": "b.mp3"
+      },
+      "c": {
+          "speech": "charlie for c",
+          "file": "c.mp3"
+      },
+      "d": {
+          "speech": "delta for d",
+          "file": "d.mp3"
+      },
+      "e": {
+          "speech": "echo for e",
+          "file": "e.mp3"
+      },
+      "f": {
+          "speech": "foxtrot for f",
+          "file": "f.mp3"
+      },
+      "g": {
+          "speech": "golf for g",
+          "file": "g.mp3"
+      },
+      "h": {
+          "speech": "hotel for h",
+          "file": "h.mp3"
+      },
+      "i": {
+          "speech": "india for i",
+          "file": "i.mp3"
+      },
+      "j": {
+          "speech": "julliet for j",
+          "file": "j.mp3"
+      },
+      "k": {
+          "speech": "kilo for k",
+          "file": "k.mp3"
+      },
+      "l": {
+          "speech": "lima for l",
+          "file": "l.mp3"
+      },
+      "m": {
+          "speech": "mike for m",
+          "file": "m.mp3"
+      },
+      "n": {
+          "speech": "novembre for n",
+          "file": "n.mp3"
+      },
+      "o": {
+          "speech": "oscar for o",
+          "file": "o.mp3"
+      },
+      "p": {
+          "speech": "papa for p",
+          "file": "p.mp3"
+      },
+      "q": {
+          "speech": "quebec for q",
+          "file": "q.mp3"
+      },
+      "r": {
+          "speech": "romeo for r",
+          "file": "r.mp3"
+      },
+      "s": {
+          "speech": "sierra for s",
+          "file": "s.mp3"
+      },
+      "t": {
+          "speech": "tango for t",
+          "file": "t.mp3"
+      },
+      "u": {
+          "speech": "uniform for u",
+          "file": "u.mp3"
+      },
+      "v": {
+          "speech": "victor for v",
+          "file": "v.mp3"
+      },
+      "w": {
+          "speech": "wiskey for w",
+          "file": "w.mp3"
+      },
+      "x": {
+          "speech": "x-ray for x",
+          "file": "x.mp3"
+      },
+      "y": {
+          "speech": "yankee for y",
+          "file": "y.mp3"
+      },
+      "z": {
+          "speech": "zulu for z",
+          "file": "z.mp3"
+      },
+      " ": {
+          "speech": "space",
+          "file": "space.mp3"
+      },
+      "\t": {
+          "speech": "tab",
+          "file": "tabulation.mp3"
+      },
+      ".": {
+          "speech": "point",
+          "file": "point.mp3"
+      },
+      ",": {
+          "speech": "comma",
+          "file": "comma.mp3"
+      },
+      ";": {
+          "speech": "semicolon",
+          "file": "semicolon.mp3"
+      },
+      ":": {
+          "speech": "colon",
+          "file": "colon.mp3"
+      },
+      "!": {
+          "speech": "exclamation mark",
+          "file": "exclamation_mark.mp3"
+      },
+      "?": {
+          "speech": "question mark",
+          "file": "question_mark.mp3"
+      },
+      "’": {
+          "speech": "tick",
+          "file": "tick.mp3"
+      },
+      "‘": {
+          "speech": "backtick",
+          "file": "backtick.mp3"
+      },
+      "\"": {
+          "speech": "quotation mark",
+          "file": "quotation marks.mp3"
+      },
+      "'": {
+          "speech": "apostrophe",
+          "file": "apostrophe.mp3"
+      },
+      "´": {
+          "speech": "acute accent",
+          "file": "accent_acute.mp3"
+      },
+      "`": {
+          "speech": "grave accent",
+          "file": "accent_grave.mp3"
+      },
+      "”": {
+          "speech": "closing_inclined_quotes",
+          "file": "closing_inclined_quotes.mp3"
+      },
+      "“": {
+          "speech": "opening_inclined_quotes",
+          "file": "opening_inclined_quotes.mp3"
+      },
+      "«": {
+          "speech": "opening double quotes",
+          "file": "opening_double_quotes.mp3"
+      },
+      "»": {
+          "speech": "closing double quotes",
+          "file": "closing_double_quotes.mp3"
+      },
+      "(": {
+          "speech": "opening round bracket",
+          "file": "opening_round_bracket.mp3"
+      },
+      ")": {
+          "speech": "closing round bracket",
+          "file": "closing_round_bracket.mp3"
+      },
+      "[": {
+          "speech": "opening square bracket",
+          "file": "opening_square_bracket.mp3"
+      },
+      "]": {
+          "speech": "closing square bracket",
+          "file": "closing_square_bracket.mp3"
+      },
+      "{": {
+          "speech": "opening curly bracket",
+          "file": "opening_curly_bracket.mp3"
+      },
+      "}": {
+          "speech": "closing curly bracket",
+          "file": "closing_curly_bracket.mp3"
+      },
+      "@": {
+          "speech": "at sign",
+          "file": "at_sign.mp3"
+      },
+      "*": {
+          "speech": "asterisk_symbol",
+          "file": "symbol_asterisk.mp3"
+      },
+      "#": {
+          "speech": "hash",
+          "file": "hash.mp3"
+      },
+      "%": {
+          "speech": "percent sign",
+          "file": "percent_sign.mp3"
+      },
+      "|": {
+          "speech": "vertical_bar",
+          "file": "vertical_bar.mp3"
+      },
+      "/": {
+          "speech": "slash",
+          "file": "slash.mp3"
+      },
+      "\\": {
+          "speech": "backslash",
+          "file": "backslash.mp3"
+      },
+      "£": {
+          "speech": "lira sign",
+          "file": "lira_sign.mp3"
+      },
+      "$": {
+          "speech": "dollar sign",
+          "file": "dollar_sign.mp3"
+      },
+      "&": {
+          "speech": "ampersand",
+          "file": "ampersand.mp3"
+      },
+      "^": {
+          "speech": "caret",
+          "file": "caret.mp3"
+      },
+      "=": {
+          "speech": "equal sign",
+          "file": "equal_sign.mp3"
+      },
+      "-": {
+          "speech": "dash",
+          "file": "dash.mp3"
+      },
+      "+": {
+          "speech": "plus sign",
+          "file": "plus sign.mp3"
+      },
+      ">": {
+          "speech": "grater-than sign",
+          "file": "grater_than_sign.mp3"
+      },
+      "<": {
+          "speech": "less-then sign",
+          "file": "less_then_sign.mp3"
+      },
+      "~": {
+          "speech": "tilde",
+          "file": "tilde.mp3"
+      },
+      "_": {
+          "speech": "underscore",
+          "file": "underscore.mp3"
+      },
+      "¢": {
+          "speech": "penny sign",
+          "file": "penny_sign.mp3"
+      },
+      "©": {
+          "speech": "copyright sign",
+          "file": "copyright_sign.mp3"
+      },
+      "÷": {
+          "speech": "division sign",
+          "file": "division_sign.mp3"
+      },
+      "µ": {
+          "speech": "micron sign",
+          "file": "micron_sign.mp3"
+      },
+      "¶": {
+          "speech": "paragraph delimiter",
+          "file": "paragraph_delimiter.mp3"
+      },
+      "±": {
+          "speech": "more or less sign",
+          "file": "more_or_less_sign.mp3"
+      },
+      "®": {
+          "speech": "trademark symbol",
+          "file": "registered_brand_symbol.mp3"
+      },
+      "§": {
+          "speech": "section delimiter",
+          "file": "section_delimiter.mp3"
+      },
+      "™": {
+          "speech": "trademark sign",
+          "file": "trademark_sign.mp3"
+      },
+      "¥": {
+          "speech": "japanese yen sign",
+          "file": "japanese_yen_sign.mp3"
+      },
+      "¿": {
+          "speech": "inverted question mark",
+          "file": "inverted_question_mark.mp3"
+      },
+      "¡": {
+          "speech": "inverted exclamation mark",
+          "file": "inverted_exclamation_mark.mp3"
+      }
+   }
+}

@@ -11,6 +11,13 @@ audio/it/*.wav
 audio/it/*.ogg
 audio/it/*.pcm
 
+audio/en/opus
+audio/en/*.webm
+audio/en/*.mp3
+audio/en/*.wav
+audio/en/*.ogg
+audio/en/*.pcm
+
 # temporary files
 tmp/
 
