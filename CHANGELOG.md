@@ -2,8 +2,9 @@
 
 All notable changes to this project will be documented in this file. 
 
-## Version 0.13.1
+## Version 0.13.4
 
+- added config/README.md
 - added config/en/characters.json
 - added examples audio file in: examples/it examples/en
 

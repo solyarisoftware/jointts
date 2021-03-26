@@ -161,8 +161,6 @@ eight
 three
 ```
 
-
-
 ---
 
 [top](#) | [home](../README.md)
