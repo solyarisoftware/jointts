@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. 
 
+## Version 0.13.1
+
+- added config/en/characters.json
+- added examples audio file in: examples/it examples/en
+
+
 ## Version 0.12.0
 
 - modified config/it/characters.json
