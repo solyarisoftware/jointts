@@ -44,7 +44,7 @@ by examples:
 
 ### 👂 Listen rendered audio files 
 
-- 🎧🇮🇹 [`CSQU3054383`](it/CSQU3054383.mp3)
+- 🎧 🇮🇹 [`CSQU3054383`](it/CSQU3054383.mp3)
  
   - Italian language
   - The alphanumeric code (a shipping container code in a partial ISO6346 format) contains letters and digits
@@ -89,7 +89,7 @@ by examples:
     com/play 'examples/it/RAIU 690011 4 25 U1.mp3'
     ```
 
-- 🎧 🇬🇧 [`RAIU 690011 4 25 U1`](en/RAIU%20690011%204%2025%20U1.mp3)
+- 🎧 🇬🇧 [`RAIU 690011 4 25 U1`](en/RAIU_690011_4_25_U1.mp3)
  
   - English language
   - The alphanumeric code (a shipping container code in a complete ISO6346 format) contains letters: 
@@ -98,7 +98,7 @@ by examples:
   - No case sensitive
   - To listen from CLI with command: 
     ```bash
-    com/play 'examples/en/RAIU 690011 4 25 U1.mp3'
+    com/play 'examples/en/RAIU_690011_4_25_U1.mp3'
     ```
 
 - 🎧 🇮🇹 [`JL1349-76 [45A/MU4]`](it/JL1349-76%20%5B45AslashMU4%5D.mp3)
@@ -111,14 +111,14 @@ by examples:
     com/play 'examples/it/JL1349-76 [45AslashMU4].mp3'
     ```
 
-- 🎧 🇬🇧 [`JL1349-76 [45A/MU4]`](en/JL1349-76%20%5B45AslashMU4%5D.mp3)
+- 🎧 🇬🇧 [`JL1349-76 [45A/MU4]`](en/JL1349-76_%5B45A_slash_MU4%5D.mp3)
  
   - English language
   - The alphanumeric code contains letters, digits, blanks and special symbols as: `-` `/` `[` `]`
   - No case sensitive
   - To listen from CLI with command: 
     ```bash
-    com/play 'examples/en/JL1349-76 [45AslashMU4].mp3'
+    com/play 'examples/en/JL1349-76_[45AslashMU4].mp3'
     ```
 
 ---
